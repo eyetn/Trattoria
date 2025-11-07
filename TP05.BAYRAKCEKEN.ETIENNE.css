@@ -1,0 +1,142 @@
+header 
+{
+
+    position: fixed;
+    width: 100%;
+    background-color: rgb(213, 127, 65);
+    height : 50px;
+    top : 0;
+    
+    
+}
+nav {
+  display: flex;
+
+  justify-content: space-between;
+  
+}
+nav a {
+  text-decoration: none;
+  border: solid rgb(213, 127, 65) 3px;
+  padding: 10px ;
+  border-radius: 5px;
+  background-color: rgb(213, 127, 65);
+  color: rgb(0, 108, 4) ;
+  text-underline-offset: inherit;
+}
+nav a:hover {
+  background-color: white;
+  border-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(255, 0, 0);
+}
+
+.ElementsPizza {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;     
+  background: #b31217;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 100px;
+  gap: 10px
+}
+
+.points {
+  flex: 1;
+  border-bottom: 2px dotted;
+  margin-top: 15px;
+  margin-left: 2px;
+
+
+}
+.nom {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.prix {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+.TitreSection {
+  text-align: center;
+  margin-bottom : -80px;
+  margin-top: 10 px;
+}
+
+#Avis {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.AvisUtilisateurs {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: solid red;
+  padding: 10px
+
+  
+}
+.pfp {
+  width: 100px;
+  height: 100px;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+
+
+.pfp img {
+  width: 100%;
+  height: 100%;
+}
+
+#noteM {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#noteMoyenne {
+  width: 100px;
+  height: 200;
+  align-self: center;
+}
+
+#noteMoyenne img {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  color: olive;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(32, 32, 33);
+  padding: 50px;
+}
