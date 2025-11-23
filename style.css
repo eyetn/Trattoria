@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 :root{
-  --bg-rouge: #A72231;
-  --bg-orange: #FFA12E;
-  --txt-beige: #f5f0e4;
-  --txt-noir: #0A100D;
-  --vert: #053225;
+  --bg-body: #A72231;
+  --bg-header: #FFA12E;
+  --bright-txt: #f5f0e4;
+  --dark-txt: #0A100D;
 }
 
 body {
@@ -13,7 +12,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background: var(--bg-rouge);
+  background: var(--bg-body);
   display: flex;
   flex-flow: column nowrap;
 
@@ -21,11 +20,10 @@ body {
   font-size: larger;
 }
 
-header 
-{
+header {
   position: sticky;
   top : 0;
-  background-color: var(--bg-orange);
+  background-color: var(--bg-header);
   height : fit-content;
   
   padding: 10px 20px;
@@ -36,6 +34,9 @@ header
   justify-content: space-between;
 }
 
+#titreHeader{
+  margin-bottom: 10px;
+}
 
 nav {
   display: flex;
@@ -44,11 +45,10 @@ nav {
 
 nav a {
   text-decoration: none;
-  border: solid var(--bg-orange) 3px;
   padding: 10px ;
   border-radius: 5px;
-  background-color: var(--bg-orange);
-  color: var(--txt-noir) ;
+  background-color: var(--bg-header);
+  color: var(--dark-txt) ;
   text-underline-offset: inherit;
   margin-right: 5px;
 
@@ -56,8 +56,9 @@ nav a {
   align-items: center;
   justify-content: space-evenly;
 }
+
 nav a:hover {
-  background-color: var(--txt-beige);
+  background-color: var(--bright-txt);
 }
 
 .icon{
@@ -65,8 +66,7 @@ nav a:hover {
 }
 
 .TitreSection {
-  font-family: 'Dancing Script', 'Times New Roman', Times, serif;
-  font-style: none;
+  font-style: italic;
   text-align: center;
   font-size: 2em;
 }
@@ -74,18 +74,89 @@ nav a:hover {
 .section {
   display: flex;
   flex-direction: column;     
-  background: var(--bg-rouge);
-  color: var(--txt-beige);
-  padding: 20px;
+  background-color: var(--bg-body);
+  color: var(--bright-txt);  
+  padding: 40px 20px 20px 20px;
   text-align: center;
   gap: 10px
 }
 
-.ElementsPizza {
+hr.divider{
+  border-style: none;
+  border-top: 3px dashed var(--dark-txt);
+  width: 100%;
+}
+
+#landingview{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-bottom :15px;
+  justify-content: center;
+  background-image: url(images/chalet.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 380px;
+}
+
+#presContainer{
+  background-color: #f5f0e4b8;
+  padding:  30px 40px ;
+  color: var(--dark-txt);
+}
+
+#titrePrincipal{
+  font-size: 4em;
+  margin: 0%;
+  margin-bottom: 20px;
+}
+
+#textePres{
+  font-style: none;
+  text-align: left; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 10px;
+}
+
+#infosMenu{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-size: x-large;
+  padding: 10px;
+  border-style: outset;
+  border-color: #A72231;
+  background-color: #821a26;
+  margin-bottom: 30px ;
+}
+
+.elementPizza {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.elementPizza img{
+  height: 100px;
+  width: 150px;
+}
+
+.pizzaInfoContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.pizzaSubContainer{
+  font-size: xx-large;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;  
 }
 
 .points {
@@ -94,43 +165,38 @@ nav a:hover {
   margin-top: 15px;
   margin-left: 2px;
 }
-.nom {
-  font-size: 25px;
-  margin-left: 10px;
-}
 
 .prix {
   font-size: 25px;
   margin-right: 10px;
 }
 
-.image {
-  width: 150px;
-  height: 100px;
+.ingredients{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  margin-top: 5px;
 }
 
-.image img {
-  width: 100%;
-  height: 100%;
-}
-
-#Avis {
+#avisContainer{
   overflow-x: auto;
+  scrollbar-color: var(--bright-txt) var(--bg-body);
   display: flex;
   flex-direction: row;
+  gap: 20px;
+  padding-bottom: 20px;
 }
-
 
 .AvisUtilisateurs {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  border: solid var(--txt-beige);
+  border: solid var(--bright-txt);
   border-radius: 10px;
   padding: 20px;
   gap: 10px;
-  min-width: 200px;
+  min-width: 215px;
 }
+
 .pfp {
   width: 100px;
   height: 100px;
@@ -138,14 +204,13 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-.pfp img {
-  width: 100%;
-  height: 100%;
-}
-
 .user{
   margin: 2px;
   font-weight: bold;
+}
+
+.commentaire{
+  font-family: 'Times New Roman', Times, serif;
 }
 
 #noteM {
@@ -153,23 +218,18 @@ nav a:hover {
   justify-content: center;
   flex-direction: column;
 }
-
 #noteMoyenne {
   width: 100px;
   height: 200;
   align-self: center;
 }
 
-#noteMoyenne img {
-  width: 100%;
-  height: 100%;
-}
-
 footer {
-  color: aliceblue;
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--bright-txt);
   display: flex;
-  justify-content: flex-start;
-  background-color: rgb(32, 32, 33);
+  justify-content: flex-end;
+  background-color: var(--dark-txt);
   padding: 10px;
 }
 
