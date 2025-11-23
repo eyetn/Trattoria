@@ -5,6 +5,7 @@
   --bg-header: #FFA12E;
   --bright-txt: #f5f0e4;
   --dark-txt: #0A100D;
+  --darkT-Horaires: rgba(10, 16, 13, 0.5);
 }
 
 body {
@@ -18,6 +19,7 @@ body {
 
   font-family: 'Dancing Script', 'Times New Roman', Times, serif;
   font-size: larger;
+  border: solid 0.5px;
 }
 
 header {
@@ -32,6 +34,7 @@ header {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
+  border: solid black 1px;
 }
 
 #titreHeader{
@@ -96,6 +99,8 @@ hr.divider{
   background-size: cover;
   background-repeat: no-repeat;
   height: 380px;
+  border: solid black 1px;
+  border-top : solid black 0.5px;
 }
 
 #presContainer{
@@ -239,4 +244,24 @@ footer a {
 }
 footer a:hover{
   text-decoration: underline;
+}
+
+h5 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+.BlocHoraires {
+  border: #0A100D;
+  border-radius: 30px;
+  background-color: var(--darkT-Horaires);
+  margin: auto;
+  width: 100%;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  font-size: x-large;
 }
