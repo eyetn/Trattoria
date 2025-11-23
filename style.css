@@ -1,54 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
+:root{
+  --bg-rouge: #A72231;
+  --bg-orange: #FFA12E;
+  --txt-beige: #f5f0e4;
+  --txt-noir: #0A100D;
+  --vert: #053225;
+}
+
 body {
   height: 100%;
   width: 100%;
   margin: 0;
-  margin-top: 65px;
   padding: 0;
-  background: rgb(255, 0, 0);
+  background: var(--bg-rouge);
   display: flex;
   flex-flow: column nowrap;
+
+  font-family: 'Dancing Script', 'Times New Roman', Times, serif;
+  font-size: larger;
 }
 
 header 
 {
-  position: fixed;
-  width: 100%;
-  background-color: rgb(213, 127, 65);
-  height : fit-content;
+  position: sticky;
   top : 0;
+  background-color: var(--bg-orange);
+  height : fit-content;
+  
   padding: 10px 20px;
 
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
 }
 
-#titre{
-  font-family: 'Dancing Script', 'Times New Roman', Times, serif;
-  margin: 0%;
-}
 
 nav {
   display: flex;
   justify-content: space-between;
-  margin-right: 20px;
 }
 
 nav a {
   text-decoration: none;
-  border: solid rgb(213, 127, 65) 3px;
+  border: solid var(--bg-orange) 3px;
   padding: 10px ;
   border-radius: 5px;
-  background-color: rgb(213, 127, 65);
-  color: rgb(0, 108, 4) ;
+  background-color: var(--bg-orange);
+  color: var(--txt-noir) ;
   text-underline-offset: inherit;
-  margin-right: 10px;
+  margin-right: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 nav a:hover {
-  background-color: white;
-  border-color: white;
+  background-color: var(--txt-beige);
+}
+
+.icon{
+  margin-right: 10px;
+}
+
+.TitreSection {
+  font-family: 'Dancing Script', 'Times New Roman', Times, serif;
+  font-style: none;
+  text-align: center;
+  font-size: 2em;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;     
+  background: var(--bg-rouge);
+  color: var(--txt-beige);
+  padding: 20px;
+  text-align: center;
+  gap: 10px
 }
 
 .ElementsPizza {
@@ -56,16 +86,6 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   margin-bottom :15px;
-}
-
-.section {
-  display: flex;
-  flex-direction: column;     
-  background: #d50007;
-  color: beige;
-  padding: 20px;
-  text-align: center;
-  gap: 10px
 }
 
 .points {
@@ -85,19 +105,13 @@ nav a:hover {
 }
 
 .image {
-  width: 100px;
+  width: 150px;
   height: 100px;
 }
 
 .image img {
   width: 100%;
   height: 100%;
-}
-
-.TitreSection {
-  font-family: 'Dancing Script', 'Times New Roman', Times, serif;
-  font-style: italic;
-  text-align: center;
 }
 
 #Avis {
@@ -109,10 +123,12 @@ nav a:hover {
 
 .AvisUtilisateurs {
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
-  border: solid red;
+  border: solid var(--txt-beige);
+  border-radius: 10px;
   padding: 20px;
+  gap: 10px;
   min-width: 200px;
 }
 .pfp {
@@ -150,9 +166,17 @@ nav a:hover {
 }
 
 footer {
-  color: olive;
+  color: aliceblue;
   display: flex;
   justify-content: flex-start;
   background-color: rgb(32, 32, 33);
   padding: 10px;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+footer a:hover{
+  text-decoration: underline;
 }
